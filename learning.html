@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>dragWords</title>
+</head>
+
+<body style="height: 280px;">
+    <!-- Again:words.push, Difficult:recap after 1 day,Normal:recap after 3 days, Easy:recap after 7days 단계로 복습 주기 지정 -->
+    <div id="modal">
+        <span>🎉Congratulations!🎉</span>
+        <span id="wordsCount"></span>
+        <a href="/main.html"><button id="finishButton">Done</button></a>
+    </div>
+    <div id="container5">
+        <div class="word-container">
+            <span id="wordSpan" class="word-span" style="font-size: 20px;"></span>
+            <span id="translationSpan" class="word-span" style="font-size: 20px;"></span>
+        </div>
+        <div>
+            <span style="font-weight: 500; color: #757575;">Review after</span>
+            <div>
+                <button id="difficultButton" class="level-button"></button>
+                <button id="normalButton" class="level-button"></button>
+                <button id="easyButton" class="level-button"></button>
+            </div>
+        </div>
+        <div>
+            <span style="font-weight: 500; color: #757575;">From</span>
+            <a id="locationA" href="">
+            </a>
+        </div>
+    </div>
+    <a class="backButton" href="main.html" style="font-size: 16px; margin-right: 225px;">↩</a>
+    <script src="./scripts/learning.js"></script>
+</body>
+
+</html>

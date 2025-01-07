@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>DragWords</title>
+</head>
+
+<body>
+    <div id="container0">
+        <div id="headContainer">
+            <img id="titleImage" src="./images/text-box (4).png">
+            <span id="title">Drag Words</span>
+        </div>
+        <a href="configure.html" id="configurationSpan">⚙️</a>
+    </div>
+    <div id="container1">
+        <h3>Added Words</h3>
+        <div id="addedWordContainerWrapper">
+            <button id="prevButton" class="arrow-button">◀</button>
+            <div id="addedWordContainer">
+                <div id="addedWordCarousel"></div>
+            </div>
+            <button id="nextButton" class="arrow-button">▶</button>
+        </div>
+    </div>
+    <div id="createDeckButtonContainer">
+        <button id="createDeckButton">Create New Deck</button>
+    </div>
+    <div id="container2">
+        <h3>Decks</h3>
+        <div id="deckContainer"></div>
+    </div>
+    <script type="module" src="scripts/main.js"></script>
+    <script type="module" src="scripts/create-element.js"></script>
+</body>
+
+</html>

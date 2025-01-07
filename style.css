@@ -1,0 +1,394 @@
+body{
+    width: 300px;
+    height: 500px;
+    background-color: #fdfefe;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 15px;
+    padding: 0;
+    margin: 0;
+}
+
+h3{
+    color: #757575;
+}
+
+#headContainer{
+    width: 150px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+}
+
+#titleImage{
+    width: 40px;
+    height: 40px;
+}
+
+#title{
+    margin-left: 3px;
+    color: #FF9800;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+#configurationSpan{
+    position: absolute;
+    right: 10px;
+    font-size: large;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+#container0,#container1, #container2, #container3, #container4, #container5{
+    width: 270px;
+    height: 140px;
+    display: grid;
+    grid-template-rows: 20% 80%;
+    align-items: center;
+    box-shadow: 0px 0px 5px rgba(0,0,0,0.2);
+    background-color: #FFFFFF;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+#container0{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 30px;
+    box-shadow: none;
+    padding: none;
+    border-radius: 0;
+}
+
+#container2{
+    height: 200px;
+}
+
+#container3{
+    height: 60px;
+}
+
+#container4{
+    height: 120px;
+}
+
+#container5{
+    height: 200px;
+    display:grid;
+    grid-template-rows: 60% 20% 20%;
+    align-items: center;
+    justify-items: center;
+}
+
+#modal{
+    z-index: 1000;
+    position: fixed;
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.2);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: large;
+    font-weight: 600;
+}
+
+#wordsCount{
+    margin-top: 20px;
+    font-size: 30px;
+    font-weight: 800;
+}
+
+#finishButton{
+    margin-top: 20px;
+    background-color: #FF9800;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+#createDeckButtonContainer{
+    width: 280px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+#createDeckButton, #saveButton{
+    cursor: pointer;
+    border: none;
+    background-color: #FF9800;
+    color: #fdfefe;
+    padding: 8px;
+    border-radius: 5px;
+}
+
+#saveButton{
+    background-color: #757575;
+}
+
+#createDeckButton:hover{
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+}
+
+#deckContainer{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 10px;
+    overflow: auto;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+#deckContainer::-webkit-scrollbar {
+    display: none;
+}
+
+#addedWordContainerWrapper{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 27px 216px 27px;
+    align-items: center;
+    justify-items: center;
+    color: #333333;
+}
+
+#addedWordContainer{
+    width: 216px;
+    height: 100%;
+    overflow:hidden;
+}
+
+#addedWordCarousel{
+    display: flex;
+    height: 100%;
+    transition: all 0.5s;
+}
+
+#reviewCycleSelectContainer{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-rows: repeat(3,1fr);
+    align-items: center;
+}
+
+#saveButtonContainer{
+    width: 270px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.backButton{
+    text-decoration: none;
+    font-size: 20px;
+    color: #757575;
+    width: 40px;
+}
+
+.level-button{
+    margin-left: 2px;
+    margin-right: 2px;
+    cursor: pointer;
+    background-color: white;
+    color: #FF9800;
+    font-weight: 500;
+    border: 2px solid #FF9800;
+    border-radius: 5px;
+}
+
+.level-button:hover{
+    background-color: #FF9800;
+    color: white;
+}
+
+
+.target-lang-select{
+    margin-top: 10px;
+    height: 25px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.review-cycle-select{
+    height: 80%;
+    border-radius: 5px;
+    border: 1px solid #757575;
+    cursor: pointer;
+}
+
+.review-cycle-select:focus{
+    border: 2px solid #FF9800;
+}
+.title-option{
+    font-weight: 600;
+    color: #757575;
+}
+
+.arrow-button{
+    cursor: pointer;
+    background-color: inherit;
+    border: none;
+    margin-bottom: 25px;
+}
+
+.word-span, .message{
+    text-align: center;
+    text-decoration: underline;
+    font-weight: 500;
+}
+
+.message{
+    font-size: 24px;
+    color: #FF9800;
+}
+
+.word-container{
+    width: 100%;
+    height: 60%;
+    display: grid;
+    grid-template-rows: repeat(2,1fr);
+    align-items: center;
+}
+
+.translation-input{
+    border: none;
+    border-bottom: 1px solid #FF9800;
+}
+
+.translation-input:focus{
+    outline: none;
+}
+
+.translation-input::placeholder{
+    color: #757575;
+}
+
+.carousel-div{
+    width: 216px;
+    height: 100%;
+    display: grid;
+    grid-template-rows: 80% 20%;
+    background-color: inherit;
+    align-items: center;
+    justify-items: center;
+}
+
+.carousel-tooltip{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    transition: all 0.5s;
+}
+
+.delete-span{
+    cursor: pointer;
+}
+
+.deck-select{
+    border: none;
+    cursor: pointer;
+}
+
+.deck-select option{
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.deck-select:focus{
+    outline: none;
+}
+
+.add-button{
+    border: none;
+    background-color: #FF9800;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    box-shadow: 0px 0px 3px rgba(0,0,0,0.2);
+}
+
+.deckname-input-container, .deck{
+    width: 260px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    box-shadow: 0px 0px 7px rgba(0,0,0,0.2);
+    background-color: #fdfefe;
+    color:black;
+    border: 2px solid #757575;
+    border-radius: 5px;
+    padding: 2px;
+}
+
+.deck{
+    width: 261px;
+    padding: 3px;
+    flex-direction: row;
+    border: 1.5px solid #FF9800;
+    color: black;
+    box-shadow: none;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.deck-inner-container{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.deckname-p{
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.words-count-span{
+    margin-left: 10px;
+    font-size: 15px;
+    font-weight: 500;
+    color: #FF9800;
+}
+
+.deckname-input{
+    background-color: inherit;
+    width: 200px;
+    border: none;
+    border-bottom: 1px solid black;
+}
+
+.deckname-input:focus{
+    outline: none;
+}
+
+.deckname-input::placeholder{
+    color:#757575;
+    font-weight: 500;
+}
+
+.save-deckname-span{
+    font-size: 18px;
+    cursor: pointer;
+}
+.save-deckname-span:hover{
+    color: #FF9800;
+}
+

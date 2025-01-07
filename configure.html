@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DragWords</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body style="height: 300px;">
+    <div id="container3">
+        <h3>Translation target language</h3>
+        <select id="targetLangSelect" class="target-lang-select">
+            <option class="target-lang-option" value="AR">Arabic</option>
+            <option class="target-lang-option" value="BG">Bulgarian</option>
+            <option class="target-lang-option" value="CS">Czech</option>
+            <option class="target-lang-option" value="DA">Danish</option>
+            <option class="target-lang-option" value="DE">German</option>
+            <option class="target-lang-option" value="EL">Greek</option>
+            <option class="target-lang-option" value="EN-US">English</option>
+            <option class="target-lang-option" value="ES">Spanish</option>
+            <option class="target-lang-option" value="FR">French</option>
+            <option class="target-lang-option" value="IT">Italian</option>
+            <option class="target-lang-option" value="JA">Japanese</option>
+            <option class="target-lang-option" value="KO">Korean</option>
+            <option class="target-lang-option" value="RU">Russian</option>
+            <option class="target-lang-option" value="ZH">Chinese (Simplified)</option>
+        </select>
+    </div>
+
+    <div id="container4">
+        <h3>Review cycle</h3>
+        <div id="reviewCycleSelectContainer">
+            <select id="difficultLevelCycleSelect" class="review-cycle-select">
+                <option selected value="1" class="review-cycle-option-difficult">1day</option>
+                <option value="2" class="review-cycle-option-difficult">2day</option>
+                <option value="3" class="review-cycle-option-difficult">3day</option>
+            </select>
+            <select id="normalLevelCycleSelect" class="review-cycle-select">
+                <option selected value="4" class="review-cycle-option-normal">4day</option>
+                <option value="5" class="review-cycle-option-normal">5day</option>
+                <option value="6" class="review-cycle-option-normal">6day</option>
+            </select>
+            <select id="easyLevelCycleSelect" class="review-cycle-select">
+                <option selected value="7" class="review-cycle-option-easy">7day</option>
+                <option value="8" class="review-cycle-option-easy">8day</option>
+                <option value="9" class="review-cycle-option-easy">9day</option>
+            </select>
+        </div>
+    </div>
+
+    <div id="saveButtonContainer">
+        <a class="backButton" href="main.html">↩</a>
+        <button id="saveButton" disabled>Save</button>
+    </div>
+
+    <script src="../scripts/configure.js"></script>
+</body>
+
+</html>
