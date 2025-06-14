@@ -30,6 +30,15 @@ async function getWords() {
   });
 }
 
+async function getAllWords() {
+  return new Promise((resolve) => {
+    chrome.storage.local.get({ decks: [] }, (result) => {
+      const foundDeck = result.decks.find((deck) => deck.id === deckId);
+      resolve(foundDeck ? foundDeck.words : []);
+    });
+  });
+}
+
 async function getReviewCycleByLevel(levelName) {
   return new Promise((resolve) => {
     chrome.storage.local.get({ reviewCycle: {} }, (result) => {
@@ -40,14 +49,14 @@ async function getReviewCycleByLevel(levelName) {
 
 async function changeReviewDate(id, levelName) {
   const reviewCycle = await getReviewCycleByLevel(levelName);
-  let words = await getWords();
+  let words = await getAllWords();
 
   for (let i = 0; i < words.length; i++) {
     if (words[i].id === id) {
       const offset = new Date().getTimezoneOffset() * 60000;
       const currentReviewDate = new Date(words[i].reviewDate);
       const updatedReviewDate = new Date(currentReviewDate - offset);
-      updatedReviewDate.setDate(currentReviewDate.getDate() + reviewCycle);
+      updatedReviewDate.setDate(updatedReviewDate.getDate() + reviewCycle);
 
       words[i].reviewDate = updatedReviewDate.toISOString();
       break;
