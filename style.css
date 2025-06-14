@@ -1,7 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+:root{
+    --primary-color: #FF9800;
+    --gray-color: #757575;
+}
+
 body{
     width: 300px;
     height: 500px;
-    background-color: #fdfefe;
+    background: linear-gradient(180deg,#ffffff,#f2f2f2);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -9,10 +16,11 @@ body{
     row-gap: 15px;
     padding: 0;
     margin: 0;
+    font-family: 'Roboto', sans-serif;
 }
 
 h3{
-    color: #757575;
+    color: var(--gray-color);
 }
 
 #headContainer{
@@ -20,6 +28,7 @@ h3{
     height: 40px;
     display: flex;
     align-items: center;
+    gap: 4px;
 }
 
 #titleImage{
@@ -29,7 +38,7 @@ h3{
 
 #title{
     margin-left: 3px;
-    color: #FF9800;
+    color: var(--primary-color);
     font-size: 15px;
     font-weight: 600;
 }
@@ -40,6 +49,11 @@ h3{
     font-size: large;
     cursor: pointer;
     text-decoration: none;
+    color: var(--gray-color);
+    transition: color 0.3s;
+}
+#configurationSpan:hover{
+    color: var(--primary-color);
 }
 
 #container0,#container1, #container2, #container3, #container4, #container5{
@@ -107,7 +121,7 @@ h3{
 
 #finishButton{
     margin-top: 20px;
-    background-color: #FF9800;
+    background-color: var(--primary-color);
     color: white;
     padding: 10px;
     border-radius: 5px;
@@ -125,14 +139,15 @@ h3{
 #createDeckButton, #saveButton{
     cursor: pointer;
     border: none;
-    background-color: #FF9800;
+    background-color: var(--primary-color);
     color: #fdfefe;
     padding: 8px;
     border-radius: 5px;
+    transition: box-shadow 0.3s;
 }
 
 #saveButton{
-    background-color: #757575;
+    background-color: var(--gray-color);
 }
 
 #createDeckButton:hover{
@@ -195,7 +210,7 @@ h3{
 .backButton{
     text-decoration: none;
     font-size: 20px;
-    color: #757575;
+    color: var(--gray-color);
     width: 40px;
 }
 
@@ -204,14 +219,15 @@ h3{
     margin-right: 2px;
     cursor: pointer;
     background-color: white;
-    color: #FF9800;
+    color: var(--primary-color);
     font-weight: 500;
-    border: 2px solid #FF9800;
+    border: 2px solid var(--primary-color);
     border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 .level-button:hover{
-    background-color: #FF9800;
+    background-color: var(--primary-color);
     color: white;
 }
 
@@ -226,16 +242,16 @@ h3{
 .review-cycle-select{
     height: 80%;
     border-radius: 5px;
-    border: 1px solid #757575;
+    border: 1px solid var(--gray-color);
     cursor: pointer;
 }
 
 .review-cycle-select:focus{
-    border: 2px solid #FF9800;
+    border: 2px solid var(--primary-color);
 }
 .title-option{
     font-weight: 600;
-    color: #757575;
+    color: var(--gray-color);
 }
 
 .arrow-button{
@@ -253,7 +269,7 @@ h3{
 
 .message{
     font-size: 24px;
-    color: #FF9800;
+    color: var(--primary-color);
 }
 
 .word-container{
@@ -266,7 +282,7 @@ h3{
 
 .translation-input{
     border: none;
-    border-bottom: 1px solid #FF9800;
+    border-bottom: 1px solid var(--primary-color);
 }
 
 .translation-input:focus{
@@ -274,7 +290,7 @@ h3{
 }
 
 .translation-input::placeholder{
-    color: #757575;
+    color: var(--gray-color);
 }
 
 .carousel-div{
@@ -316,11 +332,12 @@ h3{
 
 .add-button{
     border: none;
-    background-color: #FF9800;
+    background-color: var(--primary-color);
     color: white;
     cursor: pointer;
     border-radius: 5px;
     box-shadow: 0px 0px 3px rgba(0,0,0,0.2);
+    transition: background-color 0.3s, box-shadow 0.3s;
 }
 
 .deckname-input-container, .deck{
@@ -332,7 +349,7 @@ h3{
     box-shadow: 0px 0px 7px rgba(0,0,0,0.2);
     background-color: #fdfefe;
     color:black;
-    border: 2px solid #757575;
+    border: 2px solid var(--gray-color);
     border-radius: 5px;
     padding: 2px;
 }
@@ -341,13 +358,17 @@ h3{
     width: 261px;
     padding: 3px;
     flex-direction: row;
-    border: 1.5px solid #FF9800;
+    border: 1.5px solid var(--primary-color);
     color: black;
     box-shadow: none;
     align-items: center;
     justify-content: space-between;
     cursor: pointer;
     text-decoration: none;
+    transition: box-shadow 0.3s;
+}
+.deck:hover{
+    box-shadow: 0 0 5px rgba(0,0,0,0.2);
 }
 
 .deck-inner-container{
@@ -365,7 +386,7 @@ h3{
     margin-left: 10px;
     font-size: 15px;
     font-weight: 500;
-    color: #FF9800;
+    color: var(--primary-color);
 }
 
 .deckname-input{
@@ -380,15 +401,16 @@ h3{
 }
 
 .deckname-input::placeholder{
-    color:#757575;
+    color:var(--gray-color);
     font-weight: 500;
 }
 
 .save-deckname-span{
     font-size: 18px;
     cursor: pointer;
+    transition: color 0.3s;
 }
 .save-deckname-span:hover{
-    color: #FF9800;
+    color: var(--primary-color);
 }
 
